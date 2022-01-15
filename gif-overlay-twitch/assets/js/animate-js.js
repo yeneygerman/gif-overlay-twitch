@@ -47,8 +47,7 @@ $(document).ready(function() {
 	
 	var animateChibi = function(id, speed) {
 		
-		var currentPos = $("#chibi-" + id).css("left").replace("px","");			
-		console.log(currentPos);		
+		var currentPos = $("#chibi-" + id).css("left").replace("px","");	
 		
 		if ($("#img-chibi-" + id).hasClass("flip")) {
 			
