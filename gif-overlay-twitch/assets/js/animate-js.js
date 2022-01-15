@@ -20,6 +20,8 @@ $(document).ready(function() {
 	var globalMinSpeed = 8500;
 	var globalMaxSpeed = 9600;
 	
+	var globalMinPos = 100;
+	
 	var createChibi = function() {			
 		var html = "";
 		
@@ -28,10 +30,10 @@ $(document).ready(function() {
 			var flipClass = "";
 			var flipIt = randomBool();
 			
-			if (leftPosition < 100) {
+			if (leftPosition < (globalMinLeftPos + globalMinPos)) {
 				flipClass = ""
 			}
-			else if (flipIt || leftPosition > 750) {
+			else if (flipIt || leftPosition > (globalMaxLeftPos - globalMinPos)) {
 				flipClass = "flip";
 			}
 			
